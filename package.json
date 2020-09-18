@@ -1,12 +1,13 @@
 {
   "name": "@nicholasess/visse",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "repository": "git@github.com:mobixsoftwarestudio/visse.git",
+  "repository": "git@github.com:nicholasess/visse.git",
   "bugs": {
-    "url": "https://github.com/nicholasess/docz-plugin-netlify/issues"
+    "url": "https://github.com/nicholasess/visse"
   },
+  "private": false,
   "author": "Nicholas Eduardo <nicholasess@gmail.com>",
   "license": "MIT",
   "files": ["dist/**/*"],
@@ -29,10 +30,8 @@
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags",
-    "start": "tsc index"
+    "postversion": "git push && git push --tags"
   },
   "dependencies": {
     "@types/date-fns": "^2.6.0",
