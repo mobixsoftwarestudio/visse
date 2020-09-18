@@ -1,14 +1,14 @@
 {
-  "name": "@nicholasess/visse",
+  "name": "@mobixtec/visse",
   "version": "1.0.6",
   "main": "dist/index.js",
   "types": "src/index.d.ts",
-  "repository": "git@github.com:nicholasess/visse.git",
+  "repository": "git@github.com:mobixsoftwarestudio/visse.git",
   "bugs": {
-    "url": "https://github.com/nicholasess/visse"
+    "url": "https://github.com/mobixsoftwarestudio/visse.git"
   },
   "private": false,
-  "author": "Nicholas Eduardo <nicholasess@gmail.com>",
+  "author": "MobixTec <devteam@mobixtec.com>",
   "license": "MIT",
   "files": [
     "dist/**/*",
