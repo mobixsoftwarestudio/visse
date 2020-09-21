@@ -1,12 +1,22 @@
-import { filterDate } from '../src/index';
+import { filter } from '../src/index';
 import { date } from '../src/index';
+import { Request } from 'express';
+
+interface Req {
+  query?: {
+    createdAtInitial?: Date;
+    createdAtFinal?: Date;
+    updatedAtInitial?: Date;
+    updatedAtFinal: Date;
+  };
+}
 
 describe('Filter', () => {
   it('QueryString empty', () => {
     const req = {
       query: {},
-    };
-    const result = filterDate.filterQueryStringDate(req);
+    } as Req;
+    const result = filter.filterQueryStringDate(req);
     expect(result).toEqual({});
   });
 
@@ -18,7 +28,7 @@ describe('Filter', () => {
       },
     };
 
-    const result = filterDate.filterQueryStringDate(req);
+    const result = filter.filterQueryStringDate(req);
     expect(result).toEqual({
       createdAt: {
         $gte: date.formatDateHourAndMinutes({
@@ -39,7 +49,7 @@ describe('Filter', () => {
       },
     };
 
-    const result = filterDate.filterQueryStringDate(req);
+    const result = filter.filterQueryStringDate(req);
     expect(result).toEqual({
       createdAt: {
         $lte: date.formatDateHourAndMinutes({
@@ -61,7 +71,7 @@ describe('Filter', () => {
       },
     };
 
-    const result = filterDate.filterQueryStringDate(req);
+    const result = filter.filterQueryStringDate(req);
     expect(result).toEqual({
       createdAt: {
         $lte: date.formatDateHourAndMinutes({
@@ -88,7 +98,7 @@ describe('Filter', () => {
       },
     };
 
-    const result = filterDate.filterQueryStringDate(req);
+    const result = filter.filterQueryStringDate(req);
     expect(result).toEqual({
       updatedAt: {
         $gte: date.formatDateHourAndMinutes({
@@ -109,7 +119,7 @@ describe('Filter', () => {
       },
     };
 
-    const result = filterDate.filterQueryStringDate(req);
+    const result = filter.filterQueryStringDate(req);
     expect(result).toEqual({
       updatedAt: {
         $lte: date.formatDateHourAndMinutes({
@@ -131,7 +141,7 @@ describe('Filter', () => {
       },
     };
 
-    const result = filterDate.filterQueryStringDate(req);
+    const result = filter.filterQueryStringDate(req);
     expect(result).toEqual({
       updatedAt: {
         $lte: date.formatDateHourAndMinutes({
