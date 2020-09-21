@@ -1,6 +1,5 @@
 import { filter } from '../src/index';
 import { date } from '../src/index';
-import { Request } from 'express';
 
 interface Req {
   query?: {
