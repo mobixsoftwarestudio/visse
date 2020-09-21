@@ -26,7 +26,7 @@ describe('Filter', () => {
       query: {
         createdAtInitial: newD,
       },
-    };
+    } as Req;
 
     const result = filter.filterQueryStringDate(req);
     expect(result).toEqual({
@@ -47,7 +47,7 @@ describe('Filter', () => {
       query: {
         createdAtFinal: newD,
       },
-    };
+    } as Req;
 
     const result = filter.filterQueryStringDate(req);
     expect(result).toEqual({
@@ -69,7 +69,7 @@ describe('Filter', () => {
         createdAtInitial: newD,
         createdAtFinal: newD,
       },
-    };
+    } as Req;
 
     const result = filter.filterQueryStringDate(req);
     expect(result).toEqual({
@@ -96,7 +96,7 @@ describe('Filter', () => {
       query: {
         updatedAtInitial: newD,
       },
-    };
+    } as Req;
 
     const result = filter.filterQueryStringDate(req);
     expect(result).toEqual({
