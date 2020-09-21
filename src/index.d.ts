@@ -1,4 +1,4 @@
 /// <reference path="index.ts" />
-import { date, filterDate, pagination, handleError, validationSchema } from './index';
+import { date, filter, sort, pagination, error, validationMiddleware } from './index';
 
-export { date, filterDate, pagination, handleError, validationSchema };
+export { date, filter, sort, pagination, error, validationMiddleware };

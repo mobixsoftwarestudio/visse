@@ -1,9 +1,9 @@
 import { ValidationError, validationResult } from 'express-validator';
-import { has, Dictionary, isEmpty } from 'lodash';
+import { Dictionary, isEmpty } from 'lodash';
 import { Request, Response, NextFunction } from 'express';
-import ErrorHandler from './handlerError';
+import ErrorHandler from './error';
 
-export const parseErrors = (errors: ValidationError[]): Dictionary<{ id: string; message: string }[]> => {
+const parseErrors = (errors: ValidationError[]): Dictionary<{ id: string; message: string }[]> => {
   const dict = {};
 
   errors.forEach((error) => {
@@ -19,7 +19,7 @@ export const parseErrors = (errors: ValidationError[]): Dictionary<{ id: string;
   return dict;
 };
 
-export const validationMiddlewareError = (req: Request, res: Response, next: NextFunction) => {
+export default (req: Request, res: Response, next: NextFunction) => {
   try {
     const errors = validationResult(req).array();
 

@@ -1,6 +1,6 @@
 {
   "name": "@mobixtec/visse",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "dist/index.js",
   "types": "src/index.d.ts",
   "repository": "git@github.com:mobixsoftwarestudio/visse.git",

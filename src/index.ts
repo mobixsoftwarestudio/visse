@@ -1,7 +1,8 @@
 import * as date from './date';
-import * as filterDate from './filterDate';
+import * as filter from './filter';
+import * as sort from './sort';
 import pagination from './pagination';
-import * as handleError from './handlerError';
-import * as validationSchema from './validationSchema';
+import * as error from './error';
+import * as validationMiddleware from './validationMiddleware';
 
-export { date, filterDate, pagination, handleError, validationSchema };
+export { date, filter, sort, pagination, error, validationMiddleware };
