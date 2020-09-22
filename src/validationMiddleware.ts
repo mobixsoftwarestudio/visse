@@ -1,7 +1,7 @@
 import { ValidationError, validationResult } from 'express-validator';
 import { Dictionary, isEmpty } from 'lodash';
 import { Request, Response, NextFunction } from 'express';
-import ErrorHandler from './error';
+import ErrorHandler from './ErrorHandler';
 
 const parseErrors = (errors: ValidationError[]): Dictionary<{ id: string; message: string }[]> => {
   const dict = {};
