@@ -4,7 +4,7 @@ describe('Date', () => {
   it('Search empty', () => {
     const result = search();
 
-    expect(result).toBe([]);
+    expect(result).toStrictEqual({});
   });
   it('Search name 10', () => {
     const result = search([{ key: 'name', value: 10 }]);

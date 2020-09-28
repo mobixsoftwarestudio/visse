@@ -1,4 +1,3 @@
-import { Request, Response, NextFunction } from 'express';
 import { Dictionary } from 'lodash';
 
 export default class ErrorHandler extends Error {
@@ -11,18 +10,3 @@ export default class ErrorHandler extends Error {
     this.fieldErrors = fieldErrors;
   }
 }
-
-export const errorHandlerMiddleware = async (
-  err: ErrorHandler,
-  req: Request,
-  res: Response,
-  next: NextFunction,
-): Promise<void> => {
-  const { statusCode, message, fieldErrors } = err;
-  res.status(statusCode).json({
-    message,
-    field_errors: fieldErrors,
-  });
-
-  next();
-};

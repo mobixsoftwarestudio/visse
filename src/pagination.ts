@@ -1,5 +1,5 @@
-export default ({ results = [], page = 0, totalCount = 0, skip = 0, limit = 15 }) => {
-  const currentCount = skip + limit;
+export default ({ results = [], page = 0, totalCount = 0, limit = 15 }) => {
+  const currentCount = limit * page + limit;
   const totalPages = Math.ceil(totalCount / limit);
 
   return {

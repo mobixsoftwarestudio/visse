@@ -5,9 +5,22 @@ import {
   sort,
   pagination,
   ErrorHandler,
+  ErrorHandlerMiddleware,
   validationMiddleware,
   search,
   setQueryStringList,
+  handlerController,
 } from './index';
 
-export { date, filter, sort, pagination, ErrorHandler, validationMiddleware, search, setQueryStringList };
+export {
+  date,
+  filter,
+  sort,
+  pagination,
+  ErrorHandler,
+  ErrorHandlerMiddleware,
+  validationMiddleware,
+  search,
+  setQueryStringList,
+  handlerController,
+};
