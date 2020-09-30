@@ -10,4 +10,9 @@ describe('ErrorHandler', () => {
     const error = new ErrorHandler(500, 'error', [{ id: 'internal-error', message: 'Error' }]);
     expect(error.fieldErrors).toStrictEqual([{ id: 'internal-error', message: 'Error' }]);
   });
+
+  it('Error 500 with array', () => {
+    const error = new ErrorHandler(500, 'error', { id: 'internal-error', message: 'Error' });
+    expect(error.fieldErrors).toStrictEqual({ id: 'internal-error', message: 'Error' });
+  });
 });
