@@ -9,7 +9,6 @@ import {
   validationMiddleware,
   search,
   setQueryStringList,
-  handlerController,
 } from './index';
 
 export {
@@ -22,5 +21,4 @@ export {
   validationMiddleware,
   search,
   setQueryStringList,
-  handlerController,
 };

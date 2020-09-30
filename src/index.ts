@@ -7,7 +7,6 @@ import pagination from './pagination';
 import ErrorHandler from './ErrorHandler';
 import ErrorHandlerMiddleware from './errorHandlerMiddleware';
 import validationMiddleware from './validationMiddleware';
-import handlerController from './handlerController';
 
 export {
   date,
@@ -19,5 +18,4 @@ export {
   validationMiddleware,
   search,
   setQueryStringList,
-  handlerController,
 };
