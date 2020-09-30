@@ -30,11 +30,7 @@ export default (req: Request, res: Response, next: NextFunction) => {
     if (error instanceof ErrorHandler) {
       next(error);
     } else {
-      next(
-        new ErrorHandler(500, 'Internal Error', [
-          { id: 'internal-error', message: error?.message ?? 'Internal Error' },
-        ]),
-      );
+      next(new ErrorHandler(500, 'Internal Error', null, [error?.message ?? 'Internal Error']));
     }
   }
 };
