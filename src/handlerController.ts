@@ -11,7 +11,7 @@ export default (handleFunction: (Request, Response, NextFunction) => Promise<voi
     if (error instanceof ErrorHandler) {
       next(error);
     } else {
-      //@ts-ignore
+      // @ts-ignore
       next(
         new ErrorHandler(500, error.message, [{ id: 'internal-error', message: error?.message ?? 'Internal Error' }]),
       );

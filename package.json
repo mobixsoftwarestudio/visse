@@ -1,6 +1,6 @@
 {
   "name": "@mobixtec/visse",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "main": "dist/index.js",
   "types": "src/index.d.ts",
   "repository": "git@github.com:mobixsoftwarestudio/visse.git",
@@ -34,7 +34,8 @@
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
     "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "publish": "npm publish --acess public"
   },
   "dependencies": {
     "@types/date-fns": "^2.6.0",
