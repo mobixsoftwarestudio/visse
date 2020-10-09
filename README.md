@@ -1,4 +1,4 @@
-Visse é um helper para Express e Mongoose.
+Visse is a helper for Express and Mongoose.
 
 ## Para Instalar
 
