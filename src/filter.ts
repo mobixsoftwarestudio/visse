@@ -6,7 +6,7 @@ interface Req {
     createdAtInitial?: Date;
     createdAtFinal?: Date;
     updatedAtInitial?: Date;
-    updatedAtFinal: Date;
+    updatedAtFinal?: Date;
   };
 }
 
